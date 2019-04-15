@@ -18,8 +18,8 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Button Margin="0 0 10 0" Grid.Column="0"  Content="Apply"></Button>
-                <Button Grid.Column="1" Content="Reset"></Button>
+                <Button x:Name ="ApplyButton" Click="ApplyButton_OnClick" Margin="0 0 10 0" Grid.Column="0"  Content="Apply"></Button>
+                <Button x:Name="ResetButton" Click="ResetButton_OnClickButton_OnClick" Grid.Column="1" Content="Reset"></Button>
                 <Button Margin="10 0 0 0" Grid.Column="2" Content="Refresh"></Button>
             </Grid>
 
@@ -27,7 +27,7 @@
 
             <!-- Description -->
             <TextBlock Text="Description" />
-            <TextBox Padding="2" />
+            <TextBox x:Name="DescriptionText" Padding="2" />
 
             <!-- Status and Revision -->
             <Grid>
@@ -71,26 +71,26 @@
 
                 <!-- Column 1 -->
                 <StackPanel Grid.Column="0" Margin="0 0 10 0">
-                    <CheckBox Content="Weld" />
-                    <CheckBox Content="Assembly" />
-                    <CheckBox Content="Plasma" />
-                    <CheckBox Content="Laser" />
-                    <CheckBox Content="Purchase" />
+                    <CheckBox Checked="Checkbox_OnChecked" x:Name="WeldCheckbox" Content="Weld" />
+                    <CheckBox Checked="Checkbox_OnChecked" x:Name="AssemblyCheckbox" Content="Assembly" />
+                    <CheckBox Checked="Checkbox_OnChecked" x:Name="PlasmaCheckbox" Content="Plasma" />
+                    <CheckBox Checked="Checkbox_OnChecked" x:Name="LaserCheckbox" Content="Laser" />
+                    <CheckBox Checked="Checkbox_OnChecked" x:Name="PurchaseCheckbox" Content="Purchase" />
                 </StackPanel>
 
                 <!-- Column 2 -->
                 <StackPanel Grid.Column="1" >
-                    <CheckBox Content="Lathe" />
-                    <CheckBox Content="Drill" />
-                    <CheckBox Content="Fold" />
-                    <CheckBox Content="Roll" />
-                    <CheckBox Content="Saw" />
+                    <CheckBox Checked="Checkbox_OnChecked" x:Name="LatheCheckbox" Content="Lathe" />
+                    <CheckBox Checked="Checkbox_OnChecked" x:Name="DrillCheckbox" Content="Drill" />
+                    <CheckBox Checked="Checkbox_OnChecked" x:Name="FoldCheckbox" Content="Fold" />
+                    <CheckBox Checked="Checkbox_OnChecked" x:Name="RollCheckbox" Content="Roll" />
+                    <CheckBox Checked="Checkbox_OnChecked" x:Name="SawCheckbox" Content="Saw" />
                 </StackPanel>
             </Grid>
 
             <!-- Length -->
             <TextBlock Text="Length" />
-            <TextBox Padding="2" />
+            <TextBox x:Name="LengthText"  Padding="2" />
 
             <!-- Mass-->
             <TextBlock Text="Mass" />
