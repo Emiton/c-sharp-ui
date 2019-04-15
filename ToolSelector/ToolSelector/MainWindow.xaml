@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToolSelector"
         mc:Ignorable="d"
-        Title="WPF Basics" Height="800" Width="400">
+        Loaded="Window_Loaded"
+        Title="Tool Selector" Height="800" Width="400">
 
     <Border Padding="10">
         <StackPanel>
@@ -23,7 +24,7 @@
                 <Button Margin="10 0 0 0" Grid.Column="2" Content="Refresh"></Button>
             </Grid>
 
-            <TextBlock Text="Pulse Properties" FontWeight="Bold" Margin="0 10" />
+            <TextBlock Text="Tool Properties" FontWeight="Bold" Margin="0 10" />
 
             <!-- Description -->
             <TextBlock Text="Description" />
@@ -94,11 +95,11 @@
 
             <!-- Mass-->
             <TextBlock Text="Mass" />
-            <TextBox IsReadOnly="True" Background="#eee" Padding="2" />
+            <TextBox x:Name="MassText" IsReadOnly="True" Background="#eee" Padding="2" />
 
             <!-- Finish -->
             <TextBlock Text="Finish" />
-            <ComboBox SelectedIndex="0" Padding="2">
+            <ComboBox SelectionChanged="FinishDropdown_SelectionChanged" x:Name="FinishDropdown" SelectedIndex="0" Padding="2">
                 <ComboBoxItem>Painted</ComboBoxItem>
                 <ComboBoxItem>Not Painted</ComboBoxItem>
             </ComboBox>
@@ -112,7 +113,7 @@
 
             <!-- Supplier Name -->
             <TextBlock Text="Supplier Name" />
-            <TextBox Padding="2" />
+            <TextBox x:Name="SupplierNameText" TextChanged="SupplierNameText_OnTextChanged" Padding="2" />
 
             <!-- Supplier Code -->
             <TextBlock Text="Supplier Code" />
@@ -121,7 +122,7 @@
             <!-- Additional Information -->
             <TextBlock Text="Additional Information" FontWeight="Bold" Margin="0 10" />
             <TextBlock Text="Note" />
-            <TextBox Padding="2" />
+            <TextBox x:Name="NoteText" Padding="2" />
 
         </StackPanel>
     </Border>
