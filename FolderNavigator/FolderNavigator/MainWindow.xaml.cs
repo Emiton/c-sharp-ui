@@ -124,7 +124,7 @@ namespace FolderNavigator
 
             try
             {
-                var fs = Directory.GetDirectories(fullPath);
+                var fs = Directory.GetFiles(fullPath);
 
                 if (fs.Length > 0)
                     files.AddRange(fs);
