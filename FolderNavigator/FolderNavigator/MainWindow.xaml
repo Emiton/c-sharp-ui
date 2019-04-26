@@ -18,7 +18,11 @@
                         <Setter.Value>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Image Width="20" Margin="3" Source="/Images/drive.png"></Image>
+                                    <Image Width="20" Margin="3" 
+                                           Source="{Binding 
+                                            RelativeSource={RelativeSource 
+                                            Mode=FindAncestor, 
+                                            AncestorType={x:Type TreeViewItem}}}" />
                                     <TextBlock VerticalAlignment="Center" Text="{Binding}" />
                                 </StackPanel>
                             </DataTemplate>

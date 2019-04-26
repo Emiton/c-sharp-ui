@@ -71,6 +71,7 @@ namespace FolderNavigator
         /// <param name="e"></param>
         private void Folder_Expanded(object sender, RoutedEventArgs e)
         {
+            #region Initial Checks
             var item = (TreeViewItem)sender;
 
             // If item only contains dummy
@@ -80,6 +81,7 @@ namespace FolderNavigator
             item.Items.Clear();
 
             var fullPath = (string)item.Tag;
+            #endregion
 
             #region Get Folders
 
