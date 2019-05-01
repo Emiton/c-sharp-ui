@@ -18,7 +18,12 @@ namespace FolderNavigator.Directory.Data
 
         public string Name
         {
-            get { return DirectoryStructure.GetFileFolderName(this.FullPath); }
+            get
+            {
+                return this.Type == DirectoryItemType.Drive
+                    ? this.FullPath
+                    : DirectoryStructure.GetFileFolderName(this.FullPath);
+            }
         }
     }
 }
